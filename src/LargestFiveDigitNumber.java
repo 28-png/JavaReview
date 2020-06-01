@@ -5,7 +5,7 @@ public class LargestFiveDigitNumber {
         for(int i = 0; i <= digits2; i++) {
 //            System.out.println(i);
             if(digits.charAt(i) > digits.charAt(i)) {
-                return digits.split(digits, 5);
+                return digits.split(digits.charAt(i), 5);
             }
         }
         return 0;
