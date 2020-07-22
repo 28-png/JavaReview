@@ -1,5 +1,4 @@
 public class LargestFiveDigitNumber {
-//largest five digit number
     public static int solve(final String digits) {
         int digits2 = digits.length();
         for(int i = 0; i <= digits2; i++) {
