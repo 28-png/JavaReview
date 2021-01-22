@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class Program {
+//    first challenge in four months
     public static int[] arrayOfMultiples(int num, int length) {
         int[] bucket = new int[length];
         for (int x = 0; x < length; x++)
@@ -8,6 +9,11 @@ public class Program {
 
             return bucket;
     }
+//    second challenge
+public static boolean isEqual(int num1, int num2) {
+return false;
+}
+
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(arrayOfMultiples(6, 10)));
