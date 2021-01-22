@@ -1,12 +1,11 @@
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Program {
     public static int[] arrayOfMultiples(int num, int length) {
-        int[] bucket = {};
-        for (int counter = 0; counter < length; counter++)
-            bucket = new int[] {num * (2 + counter)};
-//                System.out.println(num * (2 + counter));
+        int[] bucket = new int[length];
+        for (int x = 0; x < length; x++)
+            bucket[x] = num * (x+1);
+
             return bucket;
     }
 
