@@ -9,14 +9,16 @@ public class Program {
 
             return bucket;
     }
+
 //    second challenge
 public static boolean isEqual(int num1, int num2) {
-return false;
+    return num1 == num2;
 }
 
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(arrayOfMultiples(6, 10)));
+        System.out.println(isEqual(1, 1));
 }
 
 
