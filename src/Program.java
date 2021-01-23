@@ -15,8 +15,12 @@ public static boolean isEqual(int num1, int num2) {
     return num1 == num2;
 }
 
+//third challenge
+//Write a function that accepts an array of 10 integers (between 0 and 9),
+// that returns a string of those numbers in the form of a phone number.
+
     public static String createPhoneNumber(int[] numbers) {
-        // Your code here!
+        int[] limit = {10};
         return "";
     }
 
