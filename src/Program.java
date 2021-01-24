@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,11 +22,12 @@ public static boolean isEqual(int num1, int num2) {
 // that returns a string of those numbers in the form of a phone number.
 //Kata.createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}) // => returns "(123) 456-7890"
     public static String createPhoneNumber(int[] numbers) {
-//        int[] firstHalf = Arrays.copyOfRange(numbers, 0, numbers.length/3);
+        int[] firstHalf = Arrays.copyOfRange(numbers, 0, numbers.length/3);
 //                Arrays.toString(firstHalf);
-            String answer = Arrays.toString(numbers);
+        String answer = Arrays.toString(firstHalf);
+            answer = answer.substring(1, answer.length() - 1);
 
-        return answer.substring(1, answer.length() - 1);
+        return answer;
     }
 
     public static void main(String[] args) {
