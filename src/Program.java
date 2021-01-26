@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 public class Program {
 //    first challenge in four months
     public static int[] arrayOfMultiples(int num, int length) {
@@ -31,11 +30,32 @@ public static boolean isEqual(int num1, int num2) {
 //    The first word within the output should be capitalized
 //    only if the original word was capitalized (known as Upper Camel Case,
 //    also often referred to as Pascal case).
+// toCamelCase("the-stealth-warrior"); // returns "theStealthWarrior"
     static String toCamelCase(String s){
-        return "";
+        if (s == null || s.isEmpty()) {
+            return s;
+        }
+
+        StringBuilder converted = new StringBuilder();
+
+        boolean convertNext = true;
+        for (char ch : s.toCharArray()) {
+            if (Character.isSpaceChar(ch)) {
+                convertNext = true;
+            } else if (convertNext) {
+                ch = Character.toTitleCase(ch);
+                convertNext = false;
+            } else {
+                ch = Character.toLowerCase(ch);
+            }
+            converted.append(ch);
+        }
+
+        return converted.toString();
     }
 
     public static void main(String[] args) {
+        System.out.println(toCamelCase("the-stealth-warrior"));
 //        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
 //        System.out.println(Arrays.toString(arrayOfMultiples(6, 10)));
 //        System.out.println(isEqual(1, 1));
