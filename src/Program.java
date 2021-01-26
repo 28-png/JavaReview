@@ -26,8 +26,17 @@ public static boolean isEqual(int num1, int num2) {
              numbers[5], numbers[6], numbers[7], numbers[8], numbers[9]);
     }
 
+//    Complete the method/function so that it converts dash/underscore
+//    delimited words into camel casing.
+//    The first word within the output should be capitalized
+//    only if the original word was capitalized (known as Upper Camel Case,
+//    also often referred to as Pascal case).
+    static String toCamelCase(String s){
+        return "";
+    }
+
     public static void main(String[] args) {
-        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
+//        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
 //        System.out.println(Arrays.toString(arrayOfMultiples(6, 10)));
 //        System.out.println(isEqual(1, 1));
 }
