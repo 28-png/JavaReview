@@ -23,10 +23,15 @@ public static boolean isEqual(int num1, int num2) {
 //Kata.createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}) // => returns "(123) 456-7890"
     public static String createPhoneNumber(int[] numbers) {
         int[] firstHalf = Arrays.copyOfRange(numbers, 0, numbers.length/3);
+        int[] secondHalf = Arrays.copyOfRange(numbers, 3, numbers.length);
         String answer = Arrays.toString(firstHalf);
+        String answer2 = Arrays.toString(secondHalf);
         answer = answer.substring(1, answer.length() - 1);
+        answer2 = answer2.substring(1, answer2.length() - 1);
+        String firstAnswer = answer.replaceAll("[, ;]", "");
+        String lastAnswer = answer2.replaceAll("[, ;]", "");
 
-        return answer.replaceAll("[, ;]", "");
+        return "(" + firstAnswer + ")" + " " + lastAnswer;
     }
 
     public static void main(String[] args) {
