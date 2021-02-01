@@ -35,9 +35,7 @@ public static boolean isEqual(int num1, int num2) {
         if (s == null || s.isEmpty()) {
             return s;
         }
-
         StringBuilder converted = new StringBuilder();
-
         boolean convertNext = true;
         for (char ch : s.toCharArray()) {
             if (Character.isSpaceChar(ch)) {
@@ -50,7 +48,6 @@ public static boolean isEqual(int num1, int num2) {
             }
             converted.append(ch);
         }
-
         return converted.toString();
     }
 
