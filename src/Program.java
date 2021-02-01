@@ -35,12 +35,14 @@ public static boolean isEqual(int num1, int num2) {
         if (s == null || s.isEmpty()) {
             return s;
         }
+
         StringBuilder converted = new StringBuilder();
         boolean convertNext = true;
         for (char ch : s.toCharArray()) {
             if (Character.isSpaceChar(ch)) {
                 convertNext = true;
             } else if (convertNext) {
+
                 ch = Character.toTitleCase(ch);
                 convertNext = false;
             } else {
