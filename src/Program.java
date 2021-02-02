@@ -32,18 +32,11 @@ public static boolean isEqual(int num1, int num2) {
 //    also often referred to as Pascal case).
 // toCamelCase("the-stealth-warrior"); // returns "theStealthWarrior"
     static String toCamelCase(String s){
-        s = s.substring(0, 1).toUpperCase()
-                + s.substring(1);
         StringBuilder builder = new StringBuilder(s);
         for (int i = 0; i < builder.length(); i++) {
             if (builder.charAt(i) == '_' || builder.charAt(i) == '-') {
-
                 builder.deleteCharAt(i);
-                builder.replace(
-                        i, i + 1,
-                        String.valueOf(
-                                Character.toUpperCase(
-                                        builder.charAt(i))));
+                builder.replace(i, i + 1, String.valueOf(Character.toUpperCase(builder.charAt(i))));
             }
         }
 
