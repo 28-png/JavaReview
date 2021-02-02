@@ -1,6 +1,5 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+
 public class Program {
 //    first challenge in four months
     public static int[] arrayOfMultiples(int num, int length) {
@@ -48,14 +47,25 @@ public static boolean isEqual(int num1, int num2) {
 // blog posts, pictures or other items. We want to create the text that should be displayed next to
 // such an item. Implement a function likes :: [String] -> String, which must take in input array,
 // containing the names of people who like an item. It must return the display text as shown in the examples:
+// likes {} // must be "no one likes this"
+//likes {"Peter"} // must be "Peter likes this"
+//likes {"Jacob", "Alex"} // must be "Jacob and Alex like this"
+//likes {"Max", "John", "Mark"} // must be "Max, John and Mark like this"
+//likes {"Alex", "Jacob", "Mark", "Max"} // must be "Alex, Jacob and 2 others like this"
 public static String whoLikesIt(String... names) {
+        String add = "no one likes this";
+        if(names == null || Arrays.toString(names).isEmpty()) {
+           return add;
+        }
 
-    return "";
+        return "";
+
 }
 
 
     public static void main(String[] args) {
-        System.out.println(toCamelCase("the-stealth-warrior"));
+        System.out.println(whoLikesIt());
+//        System.out.println(toCamelCase("the-stealth-warrior"));
 //        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
 //        System.out.println(Arrays.toString(arrayOfMultiples(6, 10)));
 //        System.out.println(isEqual(1, 1));
