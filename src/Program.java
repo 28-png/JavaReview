@@ -32,29 +32,23 @@ public static boolean isEqual(int num1, int num2) {
 //    also often referred to as Pascal case).
 // toCamelCase("the-stealth-warrior"); // returns "theStealthWarrior"
     static String toCamelCase(String s){
-        if (s == null || s.isEmpty()) {
-            return s;
-        }
-        StringBuilder converted = new StringBuilder();
-        boolean convertNext = true;
-            if (s.contains("-")) {
-                s = s.replace("-", " ");
-            } else if (s.contains("_")) {
-                s = s.replace("_", " ");
-            }
+        s = s.substring(0, 1).toUpperCase()
+                + s.substring(1);
+        StringBuilder builder = new StringBuilder(s);
+        for (int i = 0; i < builder.length(); i++) {
+            if (builder.charAt(i) == '_' || builder.charAt(i) == '-') {
 
-        for (char ch : s.toCharArray()) {
-            if (Character.isSpaceChar(ch)) {
-                convertNext = true;
-            } else if (convertNext) {
-                ch = Character.toTitleCase(ch);
-                convertNext = false;
-            } else {
-                ch = Character.toLowerCase(ch);
+                builder.deleteCharAt(i);
+                builder.replace(
+                        i, i + 1,
+                        String.valueOf(
+                                Character.toUpperCase(
+                                        builder.charAt(i))));
             }
-            converted.append(ch);
         }
-        return converted.toString();
+
+        return builder.toString();
+
     }
 
     public static void main(String[] args) {
