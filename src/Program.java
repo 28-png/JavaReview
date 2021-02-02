@@ -37,15 +37,12 @@ public static boolean isEqual(int num1, int num2) {
         }
         StringBuilder converted = new StringBuilder();
         boolean convertNext = true;
-        for (char ch : s.toCharArray()) {
             if (s.contains("-")) {
                 s = s.replace("-", " ");
-                return "";
             } else if (s.contains("_")) {
                 s = s.replace("_", " ");
-                return "";
             }
-        }
+
         for (char ch : s.toCharArray()) {
             if (Character.isSpaceChar(ch)) {
                 convertNext = true;
