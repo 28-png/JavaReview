@@ -44,6 +44,16 @@ public static boolean isEqual(int num1, int num2) {
 
     }
 
+// You probably know the "like" system from Facebook and other pages. People can "like"
+// blog posts, pictures or other items. We want to create the text that should be displayed next to
+// such an item. Implement a function likes :: [String] -> String, which must take in input array,
+// containing the names of people who like an item. It must return the display text as shown in the examples:
+public static String whoLikesIt(String... names) {
+
+    return "";
+}
+
+
     public static void main(String[] args) {
         System.out.println(toCamelCase("the-stealth-warrior"));
 //        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
