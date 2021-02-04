@@ -1,4 +1,8 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Program {
 //    first challenge in four months
@@ -57,19 +61,32 @@ public static String whoLikesIt(String... names) {
         if(names == null || Arrays.toString(names).isEmpty()) {
            return add;
         }
-
+        for(int i = 0; i<names.length; i++) {
+            System.out.println(names[i]);
+        }
         return "";
 
 }
 
+    static int sockMerchant(int n, int[] ar) {
+        int count = 0;
+        for(int i = 0; i < ar.length; i ++)
+            for(int j = i + 1; j < ar.length; j++)
+               count = (ar[i] + ar[j]);
+        return count;
+    }
+
+
 
     public static void main(String[] args) {
-        System.out.println(whoLikesIt());
+        System.out.println(sockMerchant(3, new int[]{10, 20, 20, 10, 10, 30, 50, 10, 20}));
+//        System.out.println(whoLikesIt("matt", "cory"));
 //        System.out.println(toCamelCase("the-stealth-warrior"));
 //        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
 //        System.out.println(Arrays.toString(arrayOfMultiples(6, 10)));
 //        System.out.println(isEqual(1, 1));
 }
+
 
 
 }
