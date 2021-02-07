@@ -70,9 +70,10 @@ public static String whoLikesIt(String... names) {
 
     static int sockMerchant(int n, int[] ar) {
         int count = 0;
-        for(int i = 0; i < ar.length; i ++)
+        for(int i = 0; i < ar.length; i++)
             for(int j = i + 1; j < ar.length; j++)
-               count = (ar[i] + ar[j]);
+                if ((ar[i] + ar[j]) == n)
+                    count++;
         return count;
     }
 
