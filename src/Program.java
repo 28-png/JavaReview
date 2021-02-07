@@ -71,16 +71,14 @@ public static String whoLikesIt(String... names) {
     static int sockMerchant(int n, int[] ar) {
         int count = 0;
         for(int i = 0; i < ar.length; i++)
-            for(int j = i + 1; j < ar.length; j++)
-                if ((ar[i] == ar[j]))
-                    count = n;
+                    count++;
         return count;
     }
 
 
 
     public static void main(String[] args) {
-        System.out.println(sockMerchant(3, new int[]{10, 20, 20, 10, 10, 30, 50, 10, 20}));
+        System.out.println(sockMerchant(9, new int[]{10, 20, 20, 10, 10, 30, 50, 10, 20}));
 //        System.out.println(whoLikesIt("matt", "cory"));
 //        System.out.println(toCamelCase("the-stealth-warrior"));
 //        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
