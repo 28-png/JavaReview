@@ -68,9 +68,10 @@ public static String whoLikesIt(String... names) {
 
 }
 
-    static int sockMerchant(int n, int[] ar) {
+   public static int sockMerchant(int n, int[] ar) {
         int count = 0;
         for(int i = 0; i < ar.length; i++)
+            if(ar[i] == ar[i])
                     count++;
         return count;
     }
