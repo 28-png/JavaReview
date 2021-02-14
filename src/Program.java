@@ -71,21 +71,16 @@ public static String whoLikesIt(String... names) {
 
    public static int sockMerchant(int n, int[] ar) {
         int count = 0;
-        for(int i = 0; i < n-1; i++)
-            for(int j = 0; j < n-i-1; j++)
+        for(int i = n - 1; i > 1; i--)
+            for(int j = 0; j < i; j++)
                 if(ar[j] > ar[j+1]) {
                     int temp = ar[j];
                     ar[j] = ar[j+1];
-                    ar[j+1] = temp;
-                    for (int k=0; k<n; ++k)
-                        System.out.print(ar[k] + " ");
-                    System.out.println();
-                }
+                    ar[j] = temp;
+                    }
                     count++;
         return count;
     }
-
-
 
 
 
