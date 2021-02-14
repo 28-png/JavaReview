@@ -70,8 +70,14 @@ public static String whoLikesIt(String... names) {
 
    public static int sockMerchant(int n, int[] ar) {
         int count = 0;
-        for(int i = 0; i < n; i++)
-            System.out.println(ar[i]);
+        for(int i = n - 1; i > 1; i--)
+            for(int j = 0; j < i; j++)
+                if(ar[i] > ar[j+1]) {
+                    int temp = ar[j];
+                    ar[j] = ar[j+1];
+                    ar[j] = temp;
+                    System.out.println(ar[i]);
+                }
                     count++;
         return count;
     }
