@@ -2,6 +2,8 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
 
 public class Program {
@@ -47,45 +49,31 @@ public static boolean isEqual(int num1, int num2) {
 
     }
 
-// You probably know the "like" system from Facebook and other pages. People can "like"
-// blog posts, pictures or other items. We want to create the text that should be displayed next to
-// such an item. Implement a function likes :: [String] -> String, which must take in input array,
-// containing the names of people who like an item. It must return the display text as shown in the examples:
-// likes {} // must be "no one likes this"
-//likes {"Peter"} // must be "Peter likes this"
-//likes {"Jacob", "Alex"} // must be "Jacob and Alex like this"
-//likes {"Max", "John", "Mark"} // must be "Max, John and Mark like this"
-//likes {"Alex", "Jacob", "Mark", "Max"} // must be "Alex, Jacob and 2 others like this"
-public static String whoLikesIt(String... names) {
-        String add = "no one likes this";
-        if(names == null || Arrays.toString(names).isEmpty()) {
-           return add;
-        }
-        for(int i = 0; i<names.length; i++) {
-            System.out.println(names[i]);
-        }
-        return "";
-
+//    Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+//
+//    Write a function which takes a list of strings and returns each line prepended by the correct number.
+//
+//    The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+//
+//            Examples:
+//
+//    number(Arrays.asList()) # => []
+//    number(Arrays.asList("a", "b", "c")) // => ["1: a", "2: b", "3: c"]
+public static List<String> number(List<String> lines) {
+    return null;
 }
 
-
    public static int sockMerchant(int n, int[] ar) {
-        int count = 0;
-       for (int i = 0; i < n-1; i++)
-           for (int j = 0; j < n-i-1; j++)
-               if(ar[j] > ar[j+1]) {
-                    int temp = ar[j];
-                    ar[j] = ar[j+1];
-                    ar[j+1] = temp;
-                    for (int k= 0; k<n; ++k)
-                        System.out.print(ar[k] + " ");
-                    System.out.println();
-
-                }
-                    count++;
-        return count;
-    }
-
+       HashSet<Integer> unmatched = new HashSet<>();
+       int pairs = 0;
+       for (int i = 0; i < n; i++) {
+           if (!unmatched.add(ar[i])) {
+               unmatched.remove(ar[i]);
+               pairs++;
+           }
+       }
+           return pairs;
+   }
 
 
     public static void main(String[] args) {
