@@ -1,10 +1,7 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Program {
 //    first challenge in four months
@@ -60,7 +57,9 @@ public static boolean isEqual(int num1, int num2) {
 //    number(Arrays.asList()) # => []
 //    number(Arrays.asList("a", "b", "c")) // => ["1: a", "2: b", "3: c"]
 public static List<String> number(List<String> lines) {
-    return null;
+        for(int i = 0; i < lines.size(); i++)
+
+    return lines;
 }
 
    public static int sockMerchant(int n, int[] ar) {
@@ -77,7 +76,8 @@ public static List<String> number(List<String> lines) {
 
 
     public static void main(String[] args) {
-        System.out.println(sockMerchant(9, new int[]{10, 20, 20, 10, 10, 30, 50, 10, 20}));
+        System.out.println(number(Arrays.asList("a", "b", "c")));
+//        System.out.println(sockMerchant(9, new int[]{10, 20, 20, 10, 10, 30, 50, 10, 20}));
 //        System.out.println(whoLikesIt("matt", "cory"));
 //        System.out.println(toCamelCase("the-stealth-warrior"));
 //        System.out.println(createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
