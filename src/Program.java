@@ -57,8 +57,10 @@ public static boolean isEqual(int num1, int num2) {
 //    number(Arrays.asList()) # => []
 //    number(Arrays.asList("a", "b", "c")) // => ["1: a", "2: b", "3: c"]
 public static List<String> number(List<String> lines) {
-        for(int i = 0; i < lines.size(); i++)
-
+        int count = 1;
+        for(int i = 0; i < lines.size(); i++) {
+            lines = Collections.singletonList(String.format("%d : %s, %d : %s, %d : %s", count++,  lines.get(0), count++, lines.get(1), count++, lines.get(2)));
+        }
     return lines;
 }
 
