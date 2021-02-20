@@ -64,8 +64,7 @@ public static List<String> number(List<String> lines) {
             } else if (lines.size() == 2) {
                 lines = Collections.singletonList(String.format("%d: %s, %d: %s", count++,  lines.get(0), count++, lines.get(1)));
             } else {
-            lines = Collections.singletonList(String.format("%d: %s, %d: %s, %d: %s", count++, lines.get(0), count++, lines.get(1), count++, lines.get(2)));
-
+                lines = Collections.singletonList(String.format("%d: %s, %d: %s, %d: %s", count++, lines.get(0), count++, lines.get(1), count++, lines.get(2)));
             }
         }
     return lines;
