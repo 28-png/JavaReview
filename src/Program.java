@@ -77,21 +77,12 @@ public static List<String> number(List<String> lines) {
            return pairs;
    }
 
-//   Write a simple parser that will parse and run Deadfish.
-//
-//Deadfish has 4 commands, each 1 character long:
-//
-//i increments the value (initially 0)
-//d decrements the value
-//s squares the value
-//o outputs the value into the return array
-//Invalid characters should be ignored.
-//
-//Deadfish.parse("iiisdoso") =- new int[] {8, 64};
-public static int[] parse(String data) {
-    return null;
+//A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence
+// "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+//Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+public boolean check(String sentence){
+        return true;
 }
-
 
     public static void main(String[] args) {
         System.out.println(number(Arrays.asList("a", "b", "c")));
