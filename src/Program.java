@@ -81,8 +81,8 @@ public static List<String> number(List<String> lines) {
 // "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
 //Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
 public static boolean check(String sentence){
-        String pangramRegex = "[a-zA-Z]";
-    return sentence.contains(pangramRegex);
+        String pangramRegex = "^[a-zA-Z]";
+    return sentence.matches(pangramRegex);
 }
 
     public static void main(String[] args) {
