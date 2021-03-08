@@ -82,11 +82,12 @@ public static List<String> number(List<String> lines) {
 //Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
 public static boolean check(String sentence){
         String pangramRegex = "^[a-zA-Z]";
-    return sentence.matches(pangramRegex);
+                return sentence.matches(pangramRegex);
+
 }
 
     public static void main(String[] args) {
-        System.out.println(check(""));
+        System.out.println(check("h"));
 //        System.out.println(number(Arrays.asList("a", "b", "c")));
 //        System.out.println(sockMerchant(9, new int[]{10, 20, 20, 10, 10, 30, 50, 10, 20}));
 //        System.out.println(whoLikesIt("matt", "cory"));
