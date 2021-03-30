@@ -82,6 +82,9 @@ public static List<String> number(List<String> lines) {
 //Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
 public static boolean check(String sentence){
         String pangramRegex = "^[a-zA-Z]";
+            for(int i = 0; i <= sentence.length(); i++) {
+
+            }
                 return sentence.matches(pangramRegex);
 
 }
